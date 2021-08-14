@@ -6,7 +6,9 @@ pub fn transition() {
 
         let mut word = String::new();
 
-        io::stdin().read_line(&mut word).expect("Failed to read line");
+        io::stdin()
+            .read_line(&mut word)
+            .expect("Failed to read line");
 
         let word: String = word.trim().to_string();
 

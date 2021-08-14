@@ -1,13 +1,13 @@
 use std::collections::HashMap;
 
 pub fn statistics() {
-    let mut numbers =[171, 66, 8, 8, 3, 1213, 18, 365];
+    let numbers = vec![171, 66, 8, 8, 3, 1213, 18, 365, 1, 1, 1, 2, 2, 2];
     println!("AVERAGE: {}", average(&numbers).unwrap());
-    println!("MEDIAN: {}", median(&mut numbers).unwrap());
-    println!("MODE: {}", mode(&numbers).unwrap());
+    println!("MEDIAN: {}", median(&numbers).unwrap());
+    println!("MODE: {:#?}", mode(&numbers));
 }
 
-fn average(numbers: &[i32]) -> Option<f64> {
+fn average(numbers: &Vec<i32>) -> Option<f64> {
     let length = numbers.len();
 
     match length {
@@ -16,28 +16,32 @@ fn average(numbers: &[i32]) -> Option<f64> {
     }
 }
 
-fn median(numbers: &mut [i32; 8]) -> Option<i32> {
+fn median(numbers: &Vec<i32>) -> Option<f64> {
+    let mut numbers = numbers.clone();
     numbers.sort();
-    let length  = numbers.len() / 2;
+
+    let mut length = (numbers.len() + 1) / 2;
+    if numbers.len() % 2 == 0 {
+        length = numbers.len() / 2;
+    }
 
     match length {
-        len if len > 0 => Some(numbers[length]),
+        len if len > 0 => Some((numbers[len] + numbers[len - 1]) as f64 / 2.0),
         _ => None,
     }
 }
 
-fn mode(numbers: &[i32]) -> Option<i32> {
+fn mode(numbers: &Vec<i32>) -> Vec<i32> {
     let mut map = HashMap::new();
-
     for number in numbers {
-        let count = map.entry(*number).or_insert(0);
+        let count = map.entry(number).or_insert(0);
         *count += 1;
     }
 
-    map.iter()
-        .find_map(|(key, val)| if val == map.values().max().unwrap() {
-            Some(*key)
-        } else {
-            None
-        })
+    let max_value = map.values().cloned().max().unwrap_or(0);
+
+    map.into_iter()
+        .filter(|&(_, value)| value == max_value)
+        .map(|(&key, _)| key)
+        .collect()
 }

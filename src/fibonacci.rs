@@ -8,7 +8,7 @@ pub fn generate() {
         io::stdin().read_line(&mut n).expect("Failed to read line");
 
         let n: u32 = match n.trim().parse() {
-            Ok(num) =>  num,
+            Ok(num) => num,
             Err(_) => {
                 println!("输入错误，请重新输入！");
                 continue;
@@ -19,15 +19,14 @@ pub fn generate() {
             0..=30 => {
                 println!("F({}) 为 {}", n, fib(n));
                 break;
-            },
+            }
             _ => {
                 println!("输入错误，请重新输入！");
                 continue;
             }
         }
-    };
+    }
 }
-
 
 fn fib(n: u32) -> u32 {
     if n < 2 {
@@ -43,7 +42,7 @@ fn fib(n: u32) -> u32 {
         let previous = current;
         current = next;
         next = previous + current;
-    };
+    }
 
     return current;
 }

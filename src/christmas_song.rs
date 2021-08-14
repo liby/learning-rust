@@ -1,4 +1,3 @@
-
 pub fn print_lyrics() {
     let gifts = [
         "A partridge in a pear tree",
@@ -12,7 +11,7 @@ pub fn print_lyrics() {
         "Nine ladies dancing",
         "Ten lords a-leaping",
         "Eleven pipers piping",
-        "Twelve drummers drumming"
+        "Twelve drummers drumming",
     ];
 
     for day in 1..13 {
@@ -38,6 +37,6 @@ pub fn print_lyrics() {
     }
 }
 
-fn get_template (day: &str) {
+fn get_template(day: &str) {
     println!("On the {} day of Christmas my true love sent to me", day);
 }
