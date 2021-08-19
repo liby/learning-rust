@@ -1,8 +1,15 @@
-[package]
-name = "rust-study"
-version = "0.1.0"
-edition = "2018"
+[workspace]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
+members = [
+    "christmas-song",
+    "closures-demo",
+    "employee-management",
+    "evaluation",
+    "fibonacci",
+    "lifetime-annotations-test",
+    "minigrep",
+    "piglatinize",
+    "portal",
+    "tarait-bounds-test",
+    "temperature",
+]

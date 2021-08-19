@@ -1,7 +1,13 @@
 pub fn test() {
     let number_list = [34, 50, 25, 100, 65];
-    println!("The largest number is {} by largest_with_clone", largest_with_clone(&number_list));
-    println!("The largest number is {} by largest_with_ref", largest_with_ref(&number_list));
+    println!(
+        "The largest number is {} by largest_with_clone",
+        largest_with_clone(&number_list)
+    );
+    println!(
+        "The largest number is {} by largest_with_ref",
+        largest_with_ref(&number_list)
+    );
 }
 
 // If we don’t want to restrict the largest function to the types that implement the Copy trait, we could specify that T has the trait bound Clone instead of Copy. Then we could clone each value in the slice when we want the largest function to have ownership. Using the clone function means we’re potentially making more heap allocations in the case of types that own heap data like String, and heap allocations can be slow if we’re working with large amounts of data.

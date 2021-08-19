@@ -1,0 +1,19 @@
+[package]
+name = "portal"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+christmas-song = { path = "../christmas-song" }
+closures-demo = { path = "../closures-demo" }
+employee-management = { path = "../employee-management" }
+evaluation = { path = "../evaluation" }
+fibonacci = { path = "../fibonacci" }
+lifetime-annotations-test = { path = "../lifetime-annotations-test" }
+minigrep = { path = "../minigrep" }
+piglatinize = { path = "../piglatinize" }
+tarait-bounds-test = { path = "../tarait-bounds-test" }
+temperature = { path = "../temperature" }

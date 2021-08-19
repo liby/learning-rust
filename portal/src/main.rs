@@ -1,14 +1,4 @@
 use std::io;
-mod christmas_song;
-mod closures_demo;
-mod employee_management;
-mod evaluation;
-mod fibonacci;
-mod lifetime_annotations_test;
-mod minigrep;
-mod piglatinize;
-mod tarait_bounds_test;
-mod temperature;
 
 fn main() {
     loop {

@@ -3,5 +3,57 @@
 version = 3
 
 [[package]]
-name = "rust-study"
+name = "christmas-song"
+version = "0.1.0"
+
+[[package]]
+name = "closures-demo"
+version = "0.1.0"
+
+[[package]]
+name = "employee-management"
+version = "0.1.0"
+
+[[package]]
+name = "evaluation"
+version = "0.1.0"
+
+[[package]]
+name = "fibonacci"
+version = "0.1.0"
+
+[[package]]
+name = "lifetime-annotations-test"
+version = "0.1.0"
+
+[[package]]
+name = "minigrep"
+version = "0.1.0"
+
+[[package]]
+name = "piglatinize"
+version = "0.1.0"
+
+[[package]]
+name = "portal"
+version = "0.1.0"
+dependencies = [
+ "christmas-song",
+ "closures-demo",
+ "employee-management",
+ "evaluation",
+ "fibonacci",
+ "lifetime-annotations-test",
+ "minigrep",
+ "piglatinize",
+ "tarait-bounds-test",
+ "temperature",
+]
+
+[[package]]
+name = "tarait-bounds-test"
+version = "0.1.0"
+
+[[package]]
+name = "temperature"
 version = "0.1.0"

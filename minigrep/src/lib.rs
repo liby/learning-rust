@@ -1,6 +1,6 @@
 use std::{env, error::Error, fs, process};
 
-fn main() {
+fn start() {
     let config = Config::new(env::args()).unwrap_or_else(|err| {
         eprintln!("Problem parsing arguments: {}", err);
         process::exit(1);
