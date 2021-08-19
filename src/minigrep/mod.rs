@@ -1,8 +1,7 @@
 use std::{env, error::Error, fs, process};
 
-fn grep() {
-    let args: Vec<String> = env::args().collect();
-    let config = Config::new(&args).unwrap_or_else(|err| {
+fn main() {
+    let config = Config::new(env::args()).unwrap_or_else(|err| {
         eprintln!("Problem parsing arguments: {}", err);
         process::exit(1);
     });
@@ -14,29 +13,33 @@ fn grep() {
 }
 
 struct Config {
-    pub query: String,
-    pub filename: String,
-    pub case_sensitive: bool,
+    query: String,
+    filename: String,
+    case_sensitive: bool,
 }
 
 impl Config {
-    pub fn new(args: &[String]) -> Result<Config, &'static str> {
-        if args.len() < 3 {
-            return Err("not enough arguments");
-        }
+    fn new(mut args: impl Iterator<Item = String>) -> Result<Config, &'static str> {
+        args.next();
+        let query = match args.next() {
+            Some(arg) => arg,
+            None => return Err("Didn't get a query string"),
+        };
 
-        let query = args[1].clone();
-        let filename = args[2].clone();
+        let filename = match args.next() {
+            Some(arg) => arg,
+            None => return Err("Did't get a file name"),
+        };
 
-        let mut case_sensitive = env::var("CASE_INSENSITIVE").is_err();
-
-        if args.len() > 3 {
-            case_sensitive = match args[3].as_str() {
+        let case_sensitive = match args.next() {
+            Some(arg) => match arg.as_str() {
                 "true" => true,
                 "1" => true,
                 _ => false,
-            }
-        }
+            },
+            // As long as the `CASE_INSENSITIVE` environment variable is set, no matter what the value is, it is considered case-insensitive.
+            None => env::var("CASE_INSENSITIVE").is_err(),
+        };
 
         Ok(Config {
             query,
@@ -63,64 +66,54 @@ fn run(config: Config) -> Result<(), Box<dyn Error>> {
 }
 
 fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
-    let mut results = Vec::new();
-
-    for line in contents.lines() {
-        if line.contains(query) {
-            results.push(line);
-        }
-    }
-
-    results
+    contents
+        .lines()
+        .filter(|line| line.contains(query))
+        .collect()
 }
 
 fn search_case_insensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
-    let query = query.to_lowercase();
-    let mut results = Vec::new();
-
-    for line in contents.lines() {
-        if line.to_lowercase().contains(&query) {
-            results.push(line);
-        }
-    }
-
-    results
+    contents
+        .lines()
+        .filter(|line| line.to_lowercase().contains(&query.to_lowercase()))
+        .collect()
 }
 
 #[cfg(test)]
 mod test {
+    use std::vec;
+
     use super::*;
 
     #[test]
     fn config_all_args() {
-        let args = [
+        let args: vec::IntoIter<String> = vec![
             "target/debug/minigrep".to_string(),
             "frog".to_string(),
             "poem.txt".to_string(),
-        ];
-        let config = Config::new(&args).unwrap();
-        assert_eq!(config.query, args[1]);
-        assert_eq!(config.filename, args[2]);
+        ]
+        .into_iter();
+
+        let config = Config::new(args).unwrap();
+        assert_eq!(config.query, "frog");
+        assert_eq!(config.filename, "poem.txt");
     }
 
     #[test]
     fn config_insufficient_args() {
-        let args = ["target/debug/minigrep".to_string()];
-        assert_eq!(Config::new(&args).err(), Some("not enough arguments"));
+        let args: vec::IntoIter<String> = vec!["target/debug/minigrep".to_string()].into_iter();
+        assert_eq!(Config::new(args).err(), Some("not enough arguments"));
     }
     #[test]
     fn file_does_not_exist() {
-        let args = [
+        let args: vec::IntoIter<String> = vec![
             "target/debug/minigrep".to_string(),
             "query".to_string(),
             "not_exist.txt".to_string(),
-        ];
+        ]
+        .into_iter();
 
-        assert!(
-            run(Config::new(&args).unwrap()).is_err(),
-            "The test parameters are `{:#?}`",
-            args
-        );
+        assert!(run(Config::new(args).unwrap()).is_err());
     }
 
     #[test]
