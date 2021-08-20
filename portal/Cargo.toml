@@ -8,12 +8,10 @@ edition = "2018"
 [dependencies]
 
 christmas-song = { path = "../christmas-song" }
-closures-demo = { path = "../closures-demo" }
 employee-management = { path = "../employee-management" }
 evaluation = { path = "../evaluation" }
 fibonacci = { path = "../fibonacci" }
 lifetime-annotations-test = { path = "../lifetime-annotations-test" }
-minigrep = { path = "../minigrep" }
 piglatinize = { path = "../piglatinize" }
 tarait-bounds-test = { path = "../tarait-bounds-test" }
 temperature = { path = "../temperature" }

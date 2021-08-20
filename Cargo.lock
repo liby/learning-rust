@@ -39,12 +39,10 @@ name = "portal"
 version = "0.1.0"
 dependencies = [
  "christmas-song",
- "closures-demo",
  "employee-management",
  "evaluation",
  "fibonacci",
  "lifetime-annotations-test",
- "minigrep",
  "piglatinize",
  "tarait-bounds-test",
  "temperature",
