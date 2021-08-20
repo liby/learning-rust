@@ -3,6 +3,7 @@
 members = [
     "christmas-song",
     "closures-demo",
+    "deadlocks-demo",
     "employee-management",
     "evaluation",
     "fibonacci",

@@ -11,6 +11,10 @@ name = "closures-demo"
 version = "0.1.0"
 
 [[package]]
+name = "deadlocks-demo"
+version = "0.1.0"
+
+[[package]]
 name = "employee-management"
 version = "0.1.0"
 
