@@ -9,6 +9,7 @@ members = [
     "fibonacci",
     "lifetime-annotations-test",
     "minigrep",
+    "oo-design-patterns",
     "piglatinize",
     "portal",
     "tarait-bounds-test",

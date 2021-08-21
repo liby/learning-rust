@@ -35,6 +35,10 @@ name = "minigrep"
 version = "0.1.0"
 
 [[package]]
+name = "oo-design-patterns"
+version = "0.1.0"
+
+[[package]]
 name = "piglatinize"
 version = "0.1.0"
 
