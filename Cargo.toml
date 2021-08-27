@@ -14,4 +14,5 @@ members = [
     "portal",
     "tarait-bounds-test",
     "temperature",
+    "web-server",
 ]

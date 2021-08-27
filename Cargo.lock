@@ -63,3 +63,7 @@ version = "0.1.0"
 [[package]]
 name = "temperature"
 version = "0.1.0"
+
+[[package]]
+name = "web-server"
+version = "0.1.0"
