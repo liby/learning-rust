@@ -1,0 +1,369 @@
+{
+    "status": "ok",
+    "data": [
+        {
+            "uid": 1451,
+            "aqi": "25",
+            "time": {
+                "tz": "+08:00",
+                "stime": "2021-09-20 22:00:00",
+                "vtime": 1632146400
+            },
+            "station": {
+                "name": "Beijing (北京)",
+                "geo": [
+                    39.954592,
+                    116.468117
+                ],
+                "url": "beijing"
+            }
+        },
+        {
+            "uid": 3303,
+            "aqi": "46",
+            "time": {
+                "tz": "+08:00",
+                "stime": "2021-09-20 22:00:00",
+                "vtime": 1632146400
+            },
+            "station": {
+                "name": "Beijing US Embassy, Beijing (北京美国大使馆)",
+                "geo": [
+                    39.954592,
+                    116.468117
+                ],
+                "url": "beijing/us-embassy",
+                "country": "CN"
+            }
+        },
+        {
+            "uid": 446,
+            "aqi": "46",
+            "time": {
+                "tz": "+08:00",
+                "stime": "2021-09-20 22:00:00",
+                "vtime": 1632146400
+            },
+            "station": {
+                "name": "Dongcheng Dongsi, Beijing (东城东四)",
+                "geo": [
+                    39.929,
+                    116.417
+                ],
+                "url": "beijing/dongchengdongsi",
+                "country": "CN"
+            }
+        },
+        {
+            "uid": 448,
+            "aqi": "38",
+            "time": {
+                "tz": "+08:00",
+                "stime": "2021-09-20 22:00:00",
+                "vtime": 1632146400
+            },
+            "station": {
+                "name": "West Park officials, Beijing (西城官园)",
+                "geo": [
+                    39.929,
+                    116.339
+                ],
+                "url": "beijing/xichengguanyuan",
+                "country": "CN"
+            }
+        },
+        {
+            "uid": 449,
+            "aqi": "30",
+            "time": {
+                "tz": "+08:00",
+                "stime": "2021-09-20 22:00:00",
+                "vtime": 1632146400
+            },
+            "station": {
+                "name": "Wanshou Temple, Beijing (西城万寿西宫)",
+                "geo": [
+                    39.878,
+                    116.352
+                ],
+                "url": "beijing/xichengwanshouxigong",
+                "country": "CN"
+            }
+        },
+        {
+            "uid": 451,
+            "aqi": "25",
+            "time": {
+                "tz": "+08:00",
+                "stime": "2021-09-20 22:00:00",
+                "vtime": 1632146400
+            },
+            "station": {
+                "name": "Chaoyang Agricultural Exhibition Hall, Beijing (朝阳农展馆)",
+                "geo": [
+                    39.937,
+                    116.461
+                ],
+                "url": "beijing/chaoyangnongzhanguan",
+                "country": "CN"
+            }
+        },
+        {
+            "uid": 447,
+            "aqi": "21",
+            "time": {
+                "tz": "+08:00",
+                "stime": "2021-09-20 22:00:00",
+                "vtime": 1632146400
+            },
+            "station": {
+                "name": "Temple of Heaven, Dongcheng, Beijing (东城天坛)",
+                "geo": [
+                    39.886,
+                    116.407
+                ],
+                "url": "beijing/dongchengtiantan",
+                "country": "CN"
+            }
+        },
+        {
+            "uid": 450,
+            "aqi": "17",
+            "time": {
+                "tz": "+08:00",
+                "stime": "2021-09-20 22:00:00",
+                "vtime": 1632146400
+            },
+            "station": {
+                "name": "Chaoyang Olympic Sports Center, Beijing (朝阳奥体中心)",
+                "geo": [
+                    39.982,
+                    116.397
+                ],
+                "url": "beijing/chaoyangaotizhongxin",
+                "country": "CN"
+            }
+        },
+        {
+            "uid": 885,
+            "aqi": "63",
+            "time": {
+                "tz": "+08:00",
+                "stime": "2021-09-20 22:00:00",
+                "vtime": 1632146400
+            },
+            "station": {
+                "name": "Beijing South , Huai'an; Beijing South , Huai'an (淮安北京南路)",
+                "geo": [
+                    33.578039,
+                    119.007906
+                ],
+                "url": "jiangsu/huaian/beijingnanlu"
+            }
+        },
+        {
+            "uid": 9724,
+            "aqi": "-",
+            "time": {
+                "tz": "+08:00",
+                "stime": "1970-01-01 00:00:00",
+                "vtime": 0
+            },
+            "station": {
+                "name": "Beijing Economic Management School Gu'an Campus, Langfang; Beijing Economic Management School Gu'an Campus, Langfang (廊坊市北京经管学校固安校区)",
+                "geo": [
+                    39.46,
+                    116.308
+                ],
+                "url": "hebei/langfangshi/beijingjingguanxuexiaoguanxiaoqu"
+            }
+        },
+        {
+            "uid": 9774,
+            "aqi": "1",
+            "time": {
+                "tz": "+08:00",
+                "stime": "2021-09-20 21:00:00",
+                "vtime": 1632142800
+            },
+            "station": {
+                "name": "Beijing Jiaotong University Seaside College, Cangzhou; Beijing Jiaotong University Seaside College, Cangzhou (沧州市北京交通大学海滨学院)",
+                "geo": [
+                    38.385,
+                    117.313
+                ],
+                "url": "hebei/cangzhoushi/beijingjiaotongdaxuehaibinxueyuan"
+            }
+        },
+        {
+            "uid": 9723,
+            "aqi": "1",
+            "time": {
+                "tz": "+08:00",
+                "stime": "2021-09-20 21:00:00",
+                "vtime": 1632142800
+            },
+            "station": {
+                "name": "Beijing Bazhong Gu'an Branch, Langfang; Beijing Bazhong Gu'an Branch, Langfang (廊坊市北京八中固安分校)",
+                "geo": [
+                    39.46,
+                    116.28
+                ],
+                "url": "hebei/langfangshi/beijingbazhongguanfenxiao"
+            }
+        },
+        {
+            "uid": 460,
+            "aqi": "17",
+            "time": {
+                "tz": "+08:00",
+                "stime": "2021-09-20 22:00:00",
+                "vtime": 1632146400
+            },
+            "station": {
+                "name": "BDA, Beijing; BDA, Beijing (亦庄开发区)",
+                "geo": [
+                    39.795,
+                    116.506
+                ],
+                "url": "beijing/yizhuangkaifaqu"
+            }
+        },
+        {
+            "uid": 465,
+            "aqi": "28",
+            "time": {
+                "tz": "+08:00",
+                "stime": "2021-09-20 22:00:00",
+                "vtime": 1632146400
+            },
+            "station": {
+                "name": "Pinggu town, Beijing; Pinggu town, Beijing (平谷镇)",
+                "geo": [
+                    40.143,
+                    117.1
+                ],
+                "url": "beijing/pingguzhen"
+            }
+        },
+        {
+            "uid": 468,
+            "aqi": "17",
+            "time": {
+                "tz": "+08:00",
+                "stime": "2021-09-20 22:00:00",
+                "vtime": 1632146400
+            },
+            "station": {
+                "name": "Yanqing town, Beijing; Yanqing town, Beijing (延庆镇)",
+                "geo": [
+                    40.453,
+                    115.972
+                ],
+                "url": "beijing/yanqingzhen"
+            }
+        },
+        {
+            "uid": 466,
+            "aqi": "24",
+            "time": {
+                "tz": "+08:00",
+                "stime": "2021-09-20 22:00:00",
+                "vtime": 1632146400
+            },
+            "station": {
+                "name": "Huairou town, Beijing; Huairou town, Beijing (怀柔镇)",
+                "geo": [
+                    40.328,
+                    116.628
+                ],
+                "url": "beijing/huairouzhen"
+            }
+        },
+        {
+            "uid": 452,
+            "aqi": "32",
+            "time": {
+                "tz": "+08:00",
+                "stime": "2021-09-20 22:00:00",
+                "vtime": 1632146400
+            },
+            "station": {
+                "name": "Haidian Wanliu, Beijing; Haidian Wanliu, Beijing (海淀万柳)",
+                "geo": [
+                    39.987,
+                    116.287
+                ],
+                "url": "beijing/haidianwanliu"
+            }
+        },
+        {
+            "uid": 463,
+            "aqi": "30",
+            "time": {
+                "tz": "+08:00",
+                "stime": "2021-09-20 22:00:00",
+                "vtime": 1632146400
+            },
+            "station": {
+                "name": "Changping Town, Beijing; Changping Town, Beijing (昌平镇)",
+                "geo": [
+                    40.217,
+                    116.23
+                ],
+                "url": "beijing/changpingzhen"
+            }
+        },
+        {
+            "uid": 467,
+            "aqi": "17",
+            "time": {
+                "tz": "+08:00",
+                "stime": "2021-09-20 22:00:00",
+                "vtime": 1632146400
+            },
+            "station": {
+                "name": "The town of Miyun, Beijing; The town of Miyun, Beijing (密云镇)",
+                "geo": [
+                    40.37,
+                    116.832
+                ],
+                "url": "beijing/miyunzhen"
+            }
+        },
+        {
+            "uid": 456,
+            "aqi": "14",
+            "time": {
+                "tz": "+08:00",
+                "stime": "2021-09-20 22:00:00",
+                "vtime": 1632146400
+            },
+            "station": {
+                "name": "Fengtai Yungang, Beijing; Fengtai Yungang, Beijing (丰台云岗)",
+                "geo": [
+                    39.824,
+                    116.146
+                ],
+                "url": "beijing/fengtaiyungang"
+            }
+        },
+        {
+            "uid": 462,
+            "aqi": "14",
+            "time": {
+                "tz": "+08:00",
+                "stime": "2021-09-20 22:00:00",
+                "vtime": 1632146400
+            },
+            "station": {
+                "name": "Shunyi New Town , Beijing; Shunyi New Town , Beijing (顺义新城)",
+                "geo": [
+                    40.127,
+                    116.655
+                ],
+                "url": "beijing/shunyixincheng"
+            }
+        }
+    ]
+}

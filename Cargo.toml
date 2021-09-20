@@ -15,4 +15,5 @@ members = [
     "tarait-bounds-test",
     "temperature",
     "web-server",
+    "weather-cli"
 ]
