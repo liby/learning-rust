@@ -114,6 +114,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "cli-game-of-life"
+version = "0.1.0"
+
+[[package]]
 name = "closures-demo"
 version = "0.1.0"
 
