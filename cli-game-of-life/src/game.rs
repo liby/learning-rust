@@ -97,3 +97,32 @@ impl fmt::Display for Universe {
         Ok(())
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn get_index() {
+        let sut = Universe::new(4, 4);
+
+        assert_eq!(sut.get_index(1, 2), 6);
+    }
+
+    #[test]
+    fn set_cells() {
+        let mut sut = Universe::new(1, 2);
+        sut.set_cells(&[(0, 1)]);
+        assert_eq!(sut.cells, vec![Cell::Dead, Cell::Alive]);
+    }
+
+    #[test]
+    fn tcik() {
+        let mut sut = Universe::new(6, 6);
+        sut.set_cells(&[(1, 2), (2, 3), (3, 1), (3, 2), (3, 3)]);
+        let mut expected_universe = Universe::new(6, 6);
+        expected_universe.set_cells(&[(2, 1), (2, 3), (3, 2), (3, 3), (4, 2)]);
+        sut.tick();
+        assert_eq!(&sut.cells, &expected_universe.cells);
+    }
+}
