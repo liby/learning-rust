@@ -28,10 +28,6 @@ impl Universe {
         }
     }
 
-    fn get_index(&self, row: u32, col: u32) -> usize {
-        (row * self.width + col) as usize
-    }
-
     pub fn tick(&mut self) {
         let mut next = self.cells.clone();
         for row in 0..self.height {
@@ -51,6 +47,22 @@ impl Universe {
         self.cells = next;
     }
 
+    pub fn row_as_string(&self, row: u32) -> Option<String> {
+        if row < self.height {
+            let mut row_string = String::new();
+            let start = self.get_index(row, 0);
+            let end = self.get_index(row, self.width);
+            let line = &self.cells[start..end];
+            for &cell in line {
+                let symbol = if cell == Cell::Dead { '◻' } else { '◼' };
+                row_string.push(symbol);
+            }
+            Some(row_string)
+        } else {
+            None
+        }
+    }
+
     fn live_neighbor_count(&self, row: u32, col: u32) -> u8 {
         let mut count = 0;
         for delta_row in [self.height - 1, 0, 1].iter().cloned() {
@@ -67,20 +79,8 @@ impl Universe {
         count
     }
 
-    pub fn row_as_string(&self, row: u32) -> Option<String> {
-        if row < self.height {
-            let mut row_string = String::new();
-            let start = self.get_index(row, 0);
-            let end = self.get_index(row, self.width);
-            let line = &self.cells[start..end];
-            for &cell in line {
-                let symbol = if cell == Cell::Dead { '◻' } else { '◼' };
-                row_string.push(symbol);
-            }
-            Some(row_string)
-        } else {
-            None
-        }
+    fn get_index(&self, row: u32, col: u32) -> usize {
+        (row * self.width + col) as usize
     }
 }
 
